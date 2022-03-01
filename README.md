@@ -1,8 +1,7 @@
 # Java Projekt für OOP am FS2022 an der HSLU
 
 ## Zweck
-Dieses Projekt dient für das Module OOP. Es nutzt einen auf [Apache Maven](https://maven.apache.org/) basierenden (und somit IDE-unabhaengigen) 
-Build und definiert die dafür notwendige, standardisierte Verzeichnisstruktur.
+Dieses Projekt dient dem Modul OOP an der HSLU und ist in der Sprache Java geschrieben.
 
 ## Verwendung
 Das Projekt kann einfach kopiert und umbenannt werden. In NetBeans kann es 
