@@ -35,17 +35,19 @@ public class Iteration {
     public static void whileFloatIteration(){
         float i = (float) 0.9;
         while (i<= 1.0f){
-           System.out.println(i);
+           //System.out.println(i);
            i = i + 0.000025f;
         }
+        System.out.println(i);
     }
     
     public static void forFloatIteration(){
         float wert = 0.9f; 
         for(int i = 0; i < 4000; i++){
             wert = wert + 0.000025f; 
-            System.out.println(wert);
+            //System.out.println(wert);
         }
+        System.out.println(wert);
     }
 
     public static void main(String[] args) {
