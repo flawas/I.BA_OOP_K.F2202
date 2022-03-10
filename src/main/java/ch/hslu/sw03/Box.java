@@ -23,7 +23,7 @@ public class Box {
              wertWidth += "#";
         }
         
-        for(int h = 0; h < (height - 2); h++){ 
+        for(int h = 0; h < 2; h++){ 
            wertHeight += "#";
            for(int hi = 0; hi< (width -2); hi++){
                wertHeight += " ";
