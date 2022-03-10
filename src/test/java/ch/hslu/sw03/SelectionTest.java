@@ -17,18 +17,37 @@ public class SelectionTest {
     }
 
     @Test
-    public void testMax() {
+    public void testMax1() {
         Assertions.assertEquals(5, Selection.max(5, 2));
     }
-    
+
     @Test
-    public void testMin(){
-        Assertions.assertEquals(2, Selection.min(4, 2));
+    public void testMax2() {
+        Assertions.assertEquals(20, Selection.max(6, 20));
     }
     
     @Test
-    public void testMaxOverloaded(){
+    public void testMin1(){
+        Assertions.assertEquals(2, Selection.min(4, 2));
+    }
+
+    @Test
+    public void testMin2(){
+        Assertions.assertEquals(4, Selection.min(4, 8));
+    }
+    
+    @Test
+    public void testMaxThreeOptions1(){
         Assertions.assertEquals(10, Selection.max(5, 6, 10));
     }
     
+    @Test
+    public void testMaxThreeOptions2(){
+        Assertions.assertEquals(6, Selection.max(5, 6, 2));
+    }
+
+    @Test
+    public void testMaxThreeOptions3(){
+        Assertions.assertEquals(5, Selection.max(5, 2, 1));
+    }    
 }
