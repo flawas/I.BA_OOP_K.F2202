@@ -17,7 +17,7 @@ public class Iteration {
     }
     
     public static void whileIteration(){
-        int i = 1;
+        int i = 0;
         while (i <= 10){
         System.out.println(i);
         i++;
@@ -25,7 +25,7 @@ public class Iteration {
     }
     
     public static void dowhileIteration(){
-        int i = 1;
+        int i = 0;
         do {
             System.out.println(i);
             i++;
@@ -34,20 +34,23 @@ public class Iteration {
     
     public static void whileFloatIteration(){
         float i = (float) 0.9;
+        int iterationTimes = 0;
         while (i<= 1.0f){
            //System.out.println(i);
            i = i + 0.000025f;
+           iterationTimes++;
         }
-        System.out.println(i);
+        System.out.println("Wert: " + i + " wird in " + iterationTimes + " berechnet.");
     }
     
     public static void forFloatIteration(){
         float wert = 0.9f; 
+        int iterationTimes = 0;
         for(int i = 0; i < 4000; i++){
             wert = wert + 0.000025f; 
-            //System.out.println(wert);
+            iterationTimes++;
         }
-        System.out.println(wert);
+        System.out.println("Wert: " + wert + " wird in " + iterationTimes + " berechnet.");
     }
 
     public static void main(String[] args) {
