@@ -2,14 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
-package ch.hslu.sw05;
+package ch.hslu.sw05.forms;
 
+import ch.hslu.sw05.forms.Rectangle;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
  *
- * @author flaviowaser
+ * @author Flavio Waser
  */
 public class RectangleTest {
     

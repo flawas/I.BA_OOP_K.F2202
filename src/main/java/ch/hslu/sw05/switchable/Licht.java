@@ -2,44 +2,48 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ch.hslu.sw04;
+package ch.hslu.sw05.switchable;
 
 /**
- *
+ ** SW05: Vererbung / Entwicklungsumgebung
+ * 
  * @author Flavio Waser
  */
-public class Motor implements Switchable {
+public class Licht extends CountingSwitchable implements Switchable {
     
     /*
     * Attribute
     */
-    private int rpm;
+    private int lumen;
 
-    public Motor(int rpm) {
-        this.rpm = rpm;
+    public Licht(int lumen) {
+        this.lumen = lumen;
     }
 
-    public int getRpm() {
-        return rpm;
+    public int getLumen() {
+        return lumen;
     }
 
-    public void setRpm(int rpm) {
-        this.rpm = rpm;
+    public void setLumen(int lumen) {
+        this.lumen = lumen;
     }
+    
     
     @Override
     public void switchOn(){
-         setRpm(100);
+         setLumen(50);
+         addCount();
     }
     
     @Override
     public void switchOff(){
-        setRpm(0);
+        setLumen(0);
+        addCount();
     }
     
     @Override
     public boolean isSwitchedOn(){
-        if(getRpm() > 0){
+        if(getLumen() > 0){
             return true;
         } else {
             return false;
@@ -48,11 +52,12 @@ public class Motor implements Switchable {
     
     @Override
     public boolean isSwitchedOff(){
-        if(getRpm() == 0){
+        if(getLumen() == 0){
             return true;
         } else {
             return false;
         }
     }
+    
     
 }

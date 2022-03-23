@@ -2,13 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ch.hslu.sw04;
+package ch.hslu.sw05.switchable;
 
 /**
- *
+ ** SW05: Vererbung / Entwicklungsumgebung
+ * 
  * @author Flavio Waser
  */
-public class Motor implements Switchable {
+public class Motor extends CountingSwitchable implements Switchable{
     
     /*
     * Attribute
@@ -30,11 +31,13 @@ public class Motor implements Switchable {
     @Override
     public void switchOn(){
          setRpm(100);
+         addCount();
     }
     
     @Override
     public void switchOff(){
         setRpm(0);
+        addCount();
     }
     
     @Override

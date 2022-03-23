@@ -2,29 +2,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
-package ch.hslu.sw03;
+package ch.hslu.sw05.namedInterface;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
  *
  * @author Flavio Waser
  */
-public class BoxTest {
+public class NameTest {
     
-    public BoxTest() {
+    public NameTest() {
     }
 
     @Test
-    public void testPrintBox() {
-       Box box = new Box();
-       box.printBox(4, 10);
+    public void testName() {
+        Name name = new Name();
+        name.setName("Flavio");
+        Assertions.assertEquals("Flavio", name.getName());
     }
-
-    @Test
-    public void testPrintBox2() {
-       Box box = new Box();
-       box.printBox(8, 20);
-    }    
     
 }

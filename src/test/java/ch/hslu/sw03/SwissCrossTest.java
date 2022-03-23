@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  *
- * @author flaviowaser
+ * @author Flavio Waser
  */
 public class SwissCrossTest {
     

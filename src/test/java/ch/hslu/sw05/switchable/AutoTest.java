@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
-package ch.hslu.sw04;
+package ch.hslu.sw05.switchable;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -18,6 +18,7 @@ public class AutoTest {
         Auto auto = new Auto();
         auto.switchOn();
         Assertions.assertTrue(auto.isSwitchedOn());
+        Assertions.assertEquals(1, auto.getSwitchCount());
     }
     
     @Test
@@ -26,6 +27,7 @@ public class AutoTest {
         auto.switchOn();
         auto.switchOff();
         Assertions.assertTrue(auto.isSwitchedOff());
+        Assertions.assertEquals(2, auto.getSwitchCount());
     }
     
     @Test
@@ -35,6 +37,8 @@ public class AutoTest {
         auto.lichtrechts.switchOff();
         Assertions.assertTrue(auto.lichtlinks.isSwitchedOff());
         Assertions.assertTrue(auto.lichtrechts.isSwitchedOff());
+        Assertions.assertEquals(1, auto.lichtlinks.getSwitchCount());
+        Assertions.assertEquals(1, auto.lichtrechts.getSwitchCount());
     }
     
     @Test
@@ -44,6 +48,8 @@ public class AutoTest {
         auto.lichtrechts.switchOn();
         Assertions.assertTrue(auto.lichtlinks.isSwitchedOn());
         Assertions.assertTrue(auto.lichtrechts.isSwitchedOn());
+        Assertions.assertEquals(1, auto.lichtlinks.getSwitchCount());
+        Assertions.assertEquals(1, auto.lichtrechts.getSwitchCount());
     }
     
 }

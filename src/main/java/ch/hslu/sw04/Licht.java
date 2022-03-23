@@ -6,7 +6,7 @@ package ch.hslu.sw04;
 
 /**
  *
- * @author flaviowaser
+ * @author Flavio Waser
  */
 public class Licht implements Switchable {
     
