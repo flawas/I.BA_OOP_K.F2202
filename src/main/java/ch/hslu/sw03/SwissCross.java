@@ -9,12 +9,8 @@ package ch.hslu.sw03;
  * @author flaviowaser
  */
 public class SwissCross {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        
+    
+    public SwissCross(final int bannerSize) {
         int size = bannerSize;
         while (!(size % 3 == 0)){
             size++;
@@ -27,11 +23,10 @@ public class SwissCross {
                 System.out.println(repeat(size, "@"));
             }
         }
-        
     }
     
     private static String repeat(int count, String with) {
-        return 
+        return new String(new char[count]).replace("\0", with);
     }
     
 }
