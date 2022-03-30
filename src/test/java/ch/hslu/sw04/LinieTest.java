@@ -26,18 +26,14 @@ public class LinieTest {
     @Test
     public void testMovePoint1(){
         Linie linie = new Linie(1, 2, 4, 5);
-        Point oldPoint = linie.getPoint1();
-        Point newPoint = new Point(3, 4); 
-        linie.movePoint(oldPoint, newPoint);
+        linie.movePoint(linie.getPoint1(), new Point(3, 4));
         Assertions.assertEquals("Point[x=3,y=4]", linie.getPoint1().toString());
     }
     
     @Test
     public void testMovePoint2(){
         Linie linie = new Linie(1, 2, 4, 5);
-        Point oldPoint = linie.getPoint2();
-        Point newPoint = new Point(7, 8); 
-        linie.movePoint(oldPoint, newPoint);
+        linie.movePoint(linie.getPoint2(), new Point(7, 8));
         Assertions.assertEquals("Point[x=7,y=8]", linie.getPoint2().toString());
     }
     
