@@ -19,6 +19,9 @@ public class Linie {
     private Point newPoint;
     private Point oldPoint;
     
+    /*
+    * Linie aufgrund von Koordinaten definieren
+    */
     public Linie(int x1, int y1, int x2, int y2){
         this.x1 = x1;
         this.x2 = x2;
@@ -28,6 +31,14 @@ public class Linie {
         // Punkte generieren
         point1 = new Point(x1, y1);
         point2 = new Point(x2, y2);
+    }
+    
+    /*
+    * Linie aufgrund von Objekten erzeugen
+    */
+    public Linie(Point point1, Point point2){
+        this.point1 = new Point(point1.getX(), point1.getY());
+        this.point2 = new Point(point2.getX(), point2.getY());
     }
     
     public void movePoint(Point oldPoint, Point newPoint){
@@ -40,13 +51,20 @@ public class Linie {
     }
 
     public Point getPoint1() {
-        return point1;
+        return new Point(point1.getX(), point1.getY());
     }
 
     public Point getPoint2() {
-        return point2;
+        return new Point(point2.getX(), point2.getY());
     }
-
+    
+    public void setStartPoint(Point newStartPoint){
+        this.point1 = new Point(newStartPoint.getX(), newStartPoint.getY());
+    }
+    
+    public void setEndPoint(Point newEndPoint){
+        this.point2 = new Point(newEndPoint.getX(), newEndPoint.getY());
+    }
 
     @Override
     public String toString() {
