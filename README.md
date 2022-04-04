@@ -6,7 +6,8 @@
 * **SW03** - Übung: Kontrollstrukturen
 * **SW04** - Übung: Schnittstellen und Datenkapselung
 * **SW05** - Übung: Vererbung
-* **SW06** - Übung: Polimorphie und UnitTesting
+* **SW06** - Übung: Polimorphie u
+* **SW07** - Übung equals(), hashCode() und Comparable
 
 ## Enhaltene Libraries (Dependencies)
 * Logging Framework - http://logging.apache.org/log4j/2.x/
