@@ -15,19 +15,19 @@ import static org.junit.jupiter.api.Assertions.*;
 class PersonTest {
 
     @Test
-    void getID() {
+    void testGetID() {
         Person person = new Person(00001, "Waser", "Flavio");
         assertEquals(00001, person.getID());
     }
 
     @Test
-    void getNachname() {
+    void testGetNachname() {
         Person person = new Person(00001, "Waser", "Flavio");
         assertEquals("Waser", person.getLastName());
     }
 
     @Test
-    void getVorname() {
+    void testGetVorname() {
         Person person = new Person(00001, "Waser", "Flavio");
         assertEquals("Flavio", person.getFirstName());
     }
@@ -35,18 +35,38 @@ class PersonTest {
     @Test
     void testToString() {
         Person person = new Person(00001, "Waser", "Flavio");
-        assertEquals("Person: 1, Waser, Flavio" , person.toString());
+        assertEquals("Person[ID=1,LastName=Waser,FirstName=Flavio]" , person.toString());
     }
 
     @Test
-    void testEquals(){
+    void testEqualsTrue(){
         Person person = new Person(00001, "Waser", "Flavio");
         Person person2 = new Person(00001, "Waser", "Flavio");
         assertTrue(person.equals(person2));
     }
 
     @Test
-    public void equalsContract() {
+    void testEqualsFalse(){
+        Person person = new Person(1, "Waser", "Flavio");
+        Person person2 = new Person(2, "Muster", "Peter");
+        assertFalse(person.equals(person2));
+    }
+
+    @Test
+    public void testEqualsContract() {
         EqualsVerifier.forClass(Person.class).suppress(Warning.NONFINAL_FIELDS).verify();
+    }
+
+    @Test
+    void testHashCode(){
+        Person person = new Person(1, "Waser", "Flavio");
+        assertEquals(395695019, person.hashCode());
+    }
+
+    @Test
+    void testEqualsHashCode(){
+        Person person = new Person(1, "Waser", "Flavio");
+        Person person2 = new Person(2, "Muster", "Peter");
+        assertNotEquals(person.hashCode(), person2.hashCode());
     }
 }
