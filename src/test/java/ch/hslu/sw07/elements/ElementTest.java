@@ -33,19 +33,19 @@ class ElementTest {
     @Test
     void testHashCodePb() {
         Pb pb = new Pb();
-        assertEquals(88397182, pb.hashCode());
+        assertEquals(520022247, pb.hashCode());
     }
 
     @Test
     void testHashCodeN() {
         N n = new N();
-        assertEquals(1513608173, n.hashCode());
+        assertEquals(1825027294, n.hashCode());
     }
 
     @Test
     void testHashCodeHg() {
         Hg hg = new Hg();
-        assertEquals(2366, hg.hashCode());
+        assertEquals(-186969338, hg.hashCode());
     }
 
     @Test
