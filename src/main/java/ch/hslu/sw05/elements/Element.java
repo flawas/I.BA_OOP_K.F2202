@@ -4,6 +4,8 @@
  */
 package ch.hslu.sw05.elements;
 
+import ch.hslu.sw08.elements.State;
+
 /**
  ** SW05: Vererbung / Entwicklungsumgebung
  *
@@ -39,6 +41,5 @@ public abstract class Element {
     @Override
     public String toString() {
         return "Element{" + "elementname=" + elementname + ", meltingPoint=" + meltingPoint + ", boilingPoint=" + boilingPoint + "}";
-    }   
-        
+    }
 }

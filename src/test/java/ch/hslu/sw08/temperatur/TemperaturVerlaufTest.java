@@ -58,4 +58,36 @@ class TemperaturVerlaufTest {
         temperaturVerlauf.add(new Temperatur(8));
         assertEquals(290.48, temperaturVerlauf.getAverageKelvin(), 0.01);
     }
+
+    @Test
+    void getMax(){
+        TemperaturVerlauf temperaturVerlauf = new TemperaturVerlauf();
+        temperaturVerlauf.add(new Temperatur(32));
+        temperaturVerlauf.add(new Temperatur(12));
+        temperaturVerlauf.add(new Temperatur(8));
+        assertEquals(32, temperaturVerlauf.getMax());
+    }
+
+    @Test
+    void getMin(){
+        TemperaturVerlauf temperaturVerlauf = new TemperaturVerlauf();
+        temperaturVerlauf.add(new Temperatur(32));
+        temperaturVerlauf.add(new Temperatur(12));
+        temperaturVerlauf.add(new Temperatur(8));
+        assertEquals(8, temperaturVerlauf.getMin());
+    }
+
+    @Test
+    void getAverageNull(){
+        TemperaturVerlauf temperaturVerlauf = new TemperaturVerlauf();
+        assertEquals(0, temperaturVerlauf.getAverageCelsius());
+        assertEquals(0, temperaturVerlauf.getAverageKelvin());
+    }
+
+    @Test
+    void getCountNull(){
+        TemperaturVerlauf temperaturVerlauf = new TemperaturVerlauf();
+        assertEquals(0, temperaturVerlauf.getCount());
+    }
+
 }
